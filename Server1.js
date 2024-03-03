@@ -19,7 +19,7 @@ app.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body;
     console.log("api called!");
     
-    EditSharpImage();
+    //EditSharpImage();
     //EditGMImage();
 
     // Create Nodemailer transporter
@@ -40,7 +40,7 @@ app.post('/send-email', async (req, res) => {
       attachments: [
         {
           filename: 'ThankYouLetter.jpg', // Name of the attachment file
-          path: '../thankyou/ThankYouLetter.png', // Path to the image file on your local filesystem
+          path: 'ThankYouLetter.png', // Path to the image file on your local filesystem
           cid: 'image' // Content ID for referencing the image in the HTML content
         }
       ]
