@@ -19,10 +19,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/send-email', async (req, res) => {
   try {
     const { name, email, message, subject } = req.body;
-    console.log("api called!");
+    console.log(`api called with data = name : ${name} , email ${email}` );
     
     var outputFile = 'output.pdf';
-    editTextInPDF('input.pdf', outputFile, name);
+    await editTextInPDF('input.pdf', outputFile, name);
 
     await sendEmail(email, name, message, subject, outputFile);
     
