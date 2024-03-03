@@ -19,7 +19,7 @@ app.post('/send-email', async (req, res) => {
     const { name, email, message } = req.body;
     console.log("api called!");
     
-    EditSharpImage();
+    //EditSharpImage();
     //EditGMImage();
 
     // Create Nodemailer transporter
